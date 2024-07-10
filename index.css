@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: white;
+    /* padding: 20px; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    max-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container h1{
+    padding: 14px 17px ;
+    background-color: rgb(246, 109, 132);
+    font-size: 20px;
+    text-transform: capitalize;
+    width: 100%;
+    color: white;
+}
+.container .task_creator{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+}
+.task_creator input[type='text']{
+    padding: 12px 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    color: rgb(252, 252, 252);
+    outline: none;
+    border: none;
+    background-color: #0a0a0a;
+    opacity: 0.7;
+}
+
+.task_creator input[type='text']::placeholder{
+    color: white;
+}
+
+.task_creator input[type='submit']{
+    background-color:rgb(246, 71, 100) ;
+    color:  white;
+    padding: 9px 0px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+ul{
+    width: 100%;
+    align-self: flex-start;
+    overflow-y: scroll;
+    /* border: 2px solid red; */
+    
+}
+
+.task_item{
+    align-self: flex-start;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 10px 8px;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.30), 0 0px 8px rgba(0,0,0,0.22);
+    margin: 10px 0px;
+}
+
+.task_item .left,.right{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.left h4{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: gray;
+    font-weight: bold;
+}
+.right .fa-solid{
+    font-size: 14px;
+    
+}
+.right .fa-trash{
+    color: red;
+}
+.right .fa-pencil{
+    color: blue;
+}
+
+
+.no_task_message{
+    font-size: 14px;
+    color: rgb(233, 15, 15);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 300px; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative; /* To control close button position */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f90404;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Other Styles */
+.modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: red;
+}
+
+.modal-content input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 9px 10px;
+    outline: none;
+    background-color: gainsboro;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: rgb(6, 6, 6);
+    border: none;
+}
+
+.modal-content input::placeholder{
+    text-transform: capitalize;
+    color: black;
+}
+
+.modal-content button {
+    background-color: #f72e2e;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    font-family: sans-serif;
+}
+
+.modal-content button:hover {
+    background-color: #cf1c00;
+}
+
+
+
+@media only screen and (max-width:467px){
+    .container{
+        width: 100%;
+    }
+    
+   .modal-content{
+    width: 100%;
+   }
+}
